@@ -1,0 +1,24 @@
+Fecha,Departure,Arrive,Hora_Salida,Hora_LLegada,Price,Tipo
+2023-02-20,BOG,MDE,12:45 p. m.,1:51 p. m.,"276.600,00",Directo
+2023-02-20,BOG,MDE,2:39 p. m.,3:45 p. m.,"359.660,00",Directo
+2023-02-20,BOG,MDE,5:14 p. m.,6:20 p. m.,"359.660,00",Directo
+2023-02-20,BOG,MDE,6:10 p. m.,7:16 p. m.,"332.530,00",Directo
+2023-02-20,BOG,MDE,8:15 p. m.,9:21 p. m.,"306.350,00",Directo
+2023-02-20,BOG,MDE,11:14 p. m.,"12:20 a. m.
++1","276.600,00",Directo
+2023-02-20,BOG,MDE,1:14 p. m.,5:14 p. m.,"483.660,00",1 parada
+2023-02-20,BOG,MDE,3:29 p. m.,9:47 p. m.,"486.280,00",1 parada
+2023-02-20,BOG,MDE,4:01 p. m.,10:29 p. m.,"457.240,00",1 parada
+2023-02-20,BOG,MDE,5:29 p. m.,9:06 p. m.,"514.010,00",1 parada
+2023-02-20,BOG,MDE,5:57 p. m.,10:29 p. m.,"483.660,00",1 parada
+2023-02-20,BOG,MDE,6:48 p. m.,9:47 p. m.,"486.280,00",1 parada
+2023-02-20,MDE,BOG,12:31 p. m.,1:30 p. m.,"360.360,00",Directo
+2023-02-20,MDE,BOG,1:41 p. m.,2:40 p. m.,"390.110,00",Directo
+2023-02-20,MDE,BOG,4:12 p. m.,5:03 p. m.,"485.080,00",Directo
+2023-02-20,MDE,BOG,6:15 p. m.,7:14 p. m.,"576.110,00",Directo
+2023-02-20,MDE,BOG,7:05 p. m.,7:56 p. m.,"576.110,00",Directo
+2023-02-20,MDE,BOG,9:03 p. m.,10:02 p. m.,"576.110,00",Directo
+2023-02-20,MDE,BOG,1:05 p. m.,7:01 p. m.,"479.010,00",1 parada
+2023-02-20,MDE,BOG,2:47 p. m.,5:22 p. m.,"557.190,00",1 parada
+2023-02-20,MDE,BOG,2:47 p. m.,6:16 p. m.,"557.190,00",1 parada
+2023-02-20,MDE,BOG,2:47 p. m.,9:03 p. m.,"602.290,00",1 parada
