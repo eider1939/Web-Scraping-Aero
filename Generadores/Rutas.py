@@ -3,7 +3,7 @@ Genera los trayectos posibles entre Ciudades
 '''
 
 def rutas():
-    ciudades = ['BOG','MDE']#,'CUC','CTG','ADZ','SMR']
+    ciudades = ['BOG','CLO']#,'CUC','CTG','ADZ','SMR']
     legs=[]
     for i in ciudades:
         for j in ciudades:

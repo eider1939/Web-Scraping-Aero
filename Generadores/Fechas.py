@@ -8,7 +8,7 @@ from datetime import timedelta
 '''
 def Fecha(Days):
     Date_now=datetime.now()
-    Fechas=[Date_now+timedelta(days=i) for i in range(0,Days)]
+    Fechas=[Date_now+timedelta(days=i) for i in range(9,Days)]
     Fechas=[dia.strftime('%Y-%m-%d') for dia in Fechas]
     return Fechas
     

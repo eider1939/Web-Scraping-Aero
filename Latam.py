@@ -21,11 +21,11 @@ def Scraping_Latam(Urls):
             #option.add_experimental_option('excludeSwitches', ['enable-logging'])
             driver = webdriver.Chrome("C:/Scraping/chromedriver.exe", chrome_options=option)
             driver.get(website)
-            time.sleep(1)
+            time.sleep(6)
             #Extra lo elementos del HTML todos los que coincidan
-            Price=driver.find_elements("xpath",'//span[@Class="sc-lmrgJh bggiiV"]')
-            Hora=driver.find_elements("xpath",'//span[@Class="sc-jbxdUx irLFPy"]')
-            Tipo=driver.find_elements("xpath",'//div[@Class="sc-kicAms cBgtCN"]')
+            Price=driver.find_elements("xpath",'//span[@Class="display-currencystyle__CurrencyAmount-sc__sc-19mlo29-2 fMjBKP"]')
+            Hora=driver.find_elements("xpath",'//span[@Class="card-flightstyle__TextHourFlight-sc__sc-16r5pdw-18 kKmcWo"]')
+            Tipo=driver.find_elements("xpath",'//div[@Class="card-flightstyle__ContainerFooterCard-sc__sc-16r5pdw-24 iMBDQD"]//a//span')
             #extraemos los datos de sus tags de html y los convertimos ne un lista
             all_Fechas=list(itertools.repeat(fecha, len(Tipo)))
             all_Departure=list(itertools.repeat(Departure, len(Tipo)))
@@ -50,7 +50,6 @@ def Scraping_Latam(Urls):
             }
             df = pd.DataFrame(Datos)
             Datos_completos=pd.concat([Datos_completos, df], ignore_index=True)
-            print(Datos_completos)
         except Exception as e:
         # ... PRINT THE ERROR MESSAGE ... #
             print(e)

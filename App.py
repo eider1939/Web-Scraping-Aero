@@ -1,7 +1,6 @@
 import Generadores.Fechas as Fechas
 import Generadores.Rutas as Rutas
 import Generadores.Urls as Urls
-import Viva as Viva
 import Latam as Latam
 import Wingo as Wingo
 import time
@@ -16,13 +15,9 @@ import pandas as pd
 if __name__ == "__main__":
     start_time=time.time()
     Fecha_hoy=datetime.now().strftime('%Y-%m-%d')
-    fechas=Fechas.Fecha(1)    #genera las fechas
+    fechas=Fechas.Fecha(26)    #genera las fechas
     rutas= Rutas.rutas()
     
-    ## Viva
-    #urls_viva=Urls.Urls_viva(fechas,rutas)
-    #Datos_Viva=Viva.Scraping_Viva(urls_viva)
-    #Datos_Viva.to_csv("Informes/Scraping_Viva_{}.csv".format(Fecha_hoy),index=False)
     ###  Latam
     urls_latam=Urls.Urls_Latam(fechas,rutas)
     Datos_Latam=Latam.Scraping_Latam(urls_latam)
