@@ -15,14 +15,15 @@ import pandas as pd
 if __name__ == "__main__":
     start_time=time.time()
     Fecha_hoy=datetime.now().strftime('%Y-%m-%d')
-    fechas=Fechas.Fecha(26)    #genera las fechas
+    fechas=Fechas.Fecha(3)    #genera las fechas
     rutas= Rutas.rutas()
     
     ###  Latam
     urls_latam=Urls.Urls_Latam(fechas,rutas)
     Datos_Latam=Latam.Scraping_Latam(urls_latam)
     Datos_Latam.to_csv("Informes/Scraping_Latam_{}.csv".format(Fecha_hoy),index=False)
-    ## Wingo
+
+    ### Wingo
     #urls_wingo=Urls.Urls_wingo(fechas,rutas)
     #Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
     #Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}.csv".format(Fecha_hoy),index=False)

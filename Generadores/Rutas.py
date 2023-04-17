@@ -1,15 +1,23 @@
 '''
 Genera los trayectos posibles entre Ciudades
+
+['BOG','CLO']--Eider
+['BOG','MDE']--andres
+['BOG','ADZ']---miguel
+['MDE,'SMR']---raul
+
+
 '''
 
 def rutas():
-    ciudades = ['BOG','CLO']#,'CUC','CTG','ADZ','SMR']
+    ciudades = ['BOG','CLO']#['BOG','MDE']#['BOG','ADZ']#['MDE,'SMR']
     legs=[]
     for i in ciudades:
         for j in ciudades:
             if i != j:
                 legs.append((i,j))
     return legs
+
 """
 def rutas():
     Matriz_rutas=[ ['BOG','MEX'],
