@@ -35,7 +35,7 @@ def Urls_wingo(fechas,legs):
     Links=[]
     for leg in legs:
         for fecha in fechas:
-            Url="https://booking.wingo.com/es/search/{}/{}/{}/1/0/0/1/COP/0/0".format(leg[0],leg[1],fecha)
+            Url="https://booking.wingo.com/es/search/MDE/BOG/2023-04-18/1/0/0/1/COP/0/0".format(leg[0],leg[1],fecha)
             Links.append([Url,leg[0],leg[1],fecha])
     return Links
 

@@ -21,11 +21,11 @@ if __name__ == "__main__":
     arrive='CLO'     #solo es para el nombre del archivo
     
     ###  Latam
-    urls_latam=Urls.Urls_Latam(fechas,rutas)
-    Datos_Latam=Latam.Scraping_Latam(urls_latam)
-    Datos_Latam['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
-    Datos_Latam['Aerolinea']='Latam'
-    Datos_Latam.to_csv("Informes/Scraping_Latam_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
+    #urls_latam=Urls.Urls_Latam(fechas,rutas)
+    #Datos_Latam=Latam.Scraping_Latam(urls_latam)
+    #Datos_Latam['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
+    #Datos_Latam['Aerolinea']='Latam'
+    #Datos_Latam.to_csv("Informes/Scraping_Latam_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
 
     ### Wingo
     urls_wingo=Urls.Urls_wingo(fechas,rutas)
