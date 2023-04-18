@@ -3,8 +3,6 @@ from datetime import timedelta
 '''
     Genera las fechas en formato año-mes-dia retorna una lista de fechas de la fecha actual 
     hasta la fecha actual + Days
-    ejemplo:
-        Fecha
 '''
 def Fecha(Days):
     Date_now=datetime.now()

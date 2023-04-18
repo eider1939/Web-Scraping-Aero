@@ -10,6 +10,11 @@ Genera los trayectos posibles entre Ciudades
 '''
 
 def rutas():
+    """
+    The function "rutas" generates all possible legs between a list of cities.
+    :return: The function `rutas()` returns a list of tuples representing all possible legs between the
+    cities in the `ciudades` list.
+    """
     ciudades = ['BOG','CLO']#['BOG','MDE']#['BOG','ADZ']#['MDE,'SMR']
     legs=[]
     for i in ciudades:
@@ -18,26 +23,7 @@ def rutas():
                 legs.append((i,j))
     return legs
 
-"""
-def rutas():
-    Matriz_rutas=[ ['BOG','MEX'],
-    ['BOG','LIM'],
-    ['BOG','UIO'],
-    ['BOG','CUN'],
-    ['BOG','GYE'],
-    ['BOG','CCS'],
-    ['BOG','SJO'],
-    ['BOG','PUJ'],
-    ['AUA','BOG'],
-    ['BOG','HAV'],
-    ['BOG','SDQ'],
-    ['BOG','CUR'],
-    ['BLB','BOG'],
-    ['BOG','SJU']
-    ]
-    for i in range(0,len(Matriz_rutas)):
-        Matriz_rutas.append([Matriz_rutas[i][1],Matriz_rutas[i][0]])
-    return Matriz_rutas"""
+
 
 
 

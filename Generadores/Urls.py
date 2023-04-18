@@ -1,5 +1,20 @@
 #La funcion crea los links que se usarna para el respectivo web scraping
 # retorna un matriz en donde cada lista es tiene 4 campos Url,Departure,Arrive,fecha
+
+
+
+"""
+    The functions "Urls_wingo, Urls_Latam and Urls_viva" generates a list of URLs for flight searches on the website based on
+    given dates and legs.
+    
+    :param fechas: a list of dates in the format "YYYY-MM-DD" for which flight search links will be
+    generated
+    :param legs: a list of tuples, where each tuple represents a flight leg with two elements: the
+    departure airport code and the arrival airport code
+    :return: The functions returns a list of lists, where each inner list contains a URL,
+    the origin airport code, the destination airport code, and a date.
+"""
+
 def Urls_viva(fechas,legs):
     Links=[]
     for leg in legs:
