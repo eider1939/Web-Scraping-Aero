@@ -1,10 +1,7 @@
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.by import By
 import pandas as pd
 import time
 import itertools
-import numpy as np
 
 def Scraping_Latam(Urls):
     Datos_completos= pd.DataFrame()
@@ -39,6 +36,8 @@ def Scraping_Latam(Urls):
             Hora_Llegada=[all_Hora[x] for x in range(0,len(all_Hora)) if x % 2 != 0]
             #Separar Precios
             Prices=[all_Prices[x] for x in range(0,len(all_Prices)) if x % 2 == 0]
+
+            #se crea el dataframe con los datos
             Datos = {
                 'Fecha':all_Fechas,
                 'Departure' : all_Departure,
@@ -49,6 +48,8 @@ def Scraping_Latam(Urls):
                 'Tipo':all_Tipo
             }
             df = pd.DataFrame(Datos)
+            print(df)
+            #se almacenas todos los datos de la urls consultadas
             Datos_completos=pd.concat([Datos_completos, df], ignore_index=True)
         except Exception as e:
         # ... PRINT THE ERROR MESSAGE ... #

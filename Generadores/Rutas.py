@@ -15,7 +15,11 @@ def rutas():
     :return: The function `rutas()` returns a list of tuples representing all possible legs between the
     cities in the `ciudades` list.
     """
+<<<<<<< Updated upstream
     ciudades = ['MDE','SMR'] #['BOG','CLO']#['BOG','MDE']#['BOG','ADZ']
+=======
+    ciudades = ['BOG','MDE']#['BOG','MDE']#['BOG','ADZ']#['MDE,'SMR']
+>>>>>>> Stashed changes
     legs=[]
     for i in ciudades:
         for j in ciudades:

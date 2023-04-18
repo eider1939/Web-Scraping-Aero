@@ -1,14 +1,18 @@
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.by import By
 import pandas as pd
 import time
-from datetime import datetime
-from datetime import timedelta
 import itertools
-import numpy as np
 
 def Scraping_Wingo(Urls):
+    """
+    This function scrapes flight data from a list of URLs and returns a pandas dataframe with the
+    extracted information.
+    
+    :param Urls: Urls is a list of lists containing the URLs of the websites to scrape, along with the
+    departure and arrival locations and the date of the flight. Each inner list contains four elements:
+    the website URL, the departure location, the arrival location, and the date of the flight
+    :return: a pandas DataFrame with flight information scraped from the provided URLs.
+    """
     Datos_completos= pd.DataFrame()
     for iterador in Urls: #iterador es una lista
         try:
@@ -32,7 +36,7 @@ def Scraping_Wingo(Urls):
             Price=driver.find_elements("xpath",'//p[@Class="font-yellow font-weight-bold mt-2"]')
             Tarifa=driver.find_elements("xpath",'//span[@Class="font-weight-bold"]')
 
-            #extraemos los datos de sus tags de html y los convertimos ne un lista
+            #extraemos los datos de sus tags de html y los convertimos en un lista
             all_Fechas=list(itertools.repeat(fecha, len(Price)))
             all_Departure=list(itertools.repeat(Departure, len(Price)))
             all_Arrive=list(itertools.repeat(Arrive, len(Price)))
@@ -46,6 +50,7 @@ def Scraping_Wingo(Urls):
             Hora_Llegada=[all_Hora[x] for x in range(0,len(all_Hora)) if x % 2 != 0]
             Tipos=[all_Tipo[x].split()[0] for x in range(0,len(all_Tipo)) if x % 2==0]
 
+            #se crea un dataframe
             Datos = {
                 'Fecha':all_Fechas,
                 'Departure' : all_Departure,
@@ -59,6 +64,7 @@ def Scraping_Wingo(Urls):
             }
             df = pd.DataFrame(Datos)
             print(df)
+            #se almacenan los datos de todas las Urls consultadas
             Datos_completos=pd.concat([Datos_completos, df], ignore_index=True)
         except Exception as e:
             print(e)
