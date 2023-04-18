@@ -17,14 +17,9 @@ if __name__ == "__main__":
     Fecha_hoy=datetime.now().strftime('%Y-%m-%d')
     fechas=Fechas.Fecha(40)    #genera las fechas
     rutas= Rutas.rutas()
-<<<<<<< Updated upstream
     Departure='MED'  #deben cambiarlo por las rutas que se les asigno no importa el orden
     arrive='SMR'     #solo es para el nombre del archivo
-=======
-    Departure='BOG'        #deben cambiarlo por las rutas que se les asigno no importa el orden
-    arrive='MDE'           #solo es para el nombre del archivo
->>>>>>> Stashed changes
-    
+
     ###  Latam
     urls_latam=Urls.Urls_Latam(fechas,rutas)
     Datos_Latam=Latam.Scraping_Latam(urls_latam)
