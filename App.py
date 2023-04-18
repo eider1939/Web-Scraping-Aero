@@ -17,20 +17,20 @@ if __name__ == "__main__":
     Fecha_hoy=datetime.now().strftime('%Y-%m-%d')
     fechas=Fechas.Fecha(60)    #genera las fechas
     rutas= Rutas.rutas()
-    Departure='BOG'  #deben cambiarlo por las rutas que se les asigno no importa el orden
-    arrive='CLO'     #solo es para el nombre del archivo
+    Departure='MED'  #deben cambiarlo por las rutas que se les asigno no importa el orden
+    arrive='SMR'     #solo es para el nombre del archivo
     
     ###  Latam
-    #urls_latam=Urls.Urls_Latam(fechas,rutas)
-    #Datos_Latam=Latam.Scraping_Latam(urls_latam)
-    #Datos_Latam['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
-    #Datos_Latam['Aerolinea']='Latam'
-    #Datos_Latam.to_csv("Informes/Scraping_Latam_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
+    urls_latam=Urls.Urls_Latam(fechas,rutas)
+    Datos_Latam=Latam.Scraping_Latam(urls_latam)
+    Datos_Latam['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
+    Datos_Latam['Aerolinea']='Latam'
+    Datos_Latam.to_csv("Informes/Scraping_Latam_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
 
     ### Wingo
-    urls_wingo=Urls.Urls_wingo(fechas,rutas)
-    Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
-    Datos_Wingo['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
-    Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
-    Datos_Wingo['Aerolinea']='Wingo'
-    print('tiempo de ejecucion ',time.time() - start_time)
+    #urls_wingo=Urls.Urls_wingo(fechas,rutas)
+    #Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
+    #Datos_Wingo['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
+    #Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
+    #Datos_Wingo['Aerolinea']='Wingo'
+    #print('tiempo de ejecucion ',time.time() - start_time)
