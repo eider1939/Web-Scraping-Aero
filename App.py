@@ -21,10 +21,12 @@ if __name__ == "__main__":
     ###  Latam
     urls_latam=Urls.Urls_Latam(fechas,rutas)
     Datos_Latam=Latam.Scraping_Latam(urls_latam)
+    Datos_Latam['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
     Datos_Latam.to_csv("Informes/Scraping_Latam_{}.csv".format(Fecha_hoy),index=False)
 
     ### Wingo
-    #urls_wingo=Urls.Urls_wingo(fechas,rutas)
-    #Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
-    #Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}.csv".format(Fecha_hoy),index=False)
+    urls_wingo=Urls.Urls_wingo(fechas,rutas)
+    Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
+    Datos_Wingo['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
+    Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}.csv".format(Fecha_hoy),index=False)
     print('tiempo de ejecucion ',time.time() - start_time)
