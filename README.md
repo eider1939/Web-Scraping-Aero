@@ -1,5 +1,9 @@
 # Web-Scraping-Aero
-Web Scraping Aerolineas
+
+"""
+    App de Scraping de aero proyecto con fines academicos 
+
+"""
 
 
 ## el Archivo App.py 
@@ -12,7 +16,7 @@ estos de encargan generar las fechas las rutas y los links.
 
 ### Generadores
 
-esta carpeta contiene lo necesario para genrar el link al que se le va hacer el web scraping
+esta carpeta contiene lo necesario para generar el link al que se le va hacer el web scraping
 
 ### Informes
 

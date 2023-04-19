@@ -4,6 +4,16 @@ import time
 import itertools
 
 def Scraping_Latam(Urls):
+    """
+    This function scrapes flight data from multiple URLs and returns a pandas dataframe with the
+    extracted information.
+    
+    :param Urls: Urls is a list of lists containing the URLs to scrape, along with the departure and
+    arrival locations and the date of the flight. Each inner list contains four elements: the URL as a
+    string, the departure location as a string, the arrival location as a string, and the date of the
+    flight as
+    :return: a pandas DataFrame with flight data scraped from the URLs provided as input.
+    """
     Datos_completos= pd.DataFrame()
     for iterador in Urls: #iterador es una lista
         try:
