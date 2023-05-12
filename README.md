@@ -26,7 +26,7 @@ Esta carpeta funciona como el almacenamineto de las respectivas consultas almace
 Esta pagina tiene la porte logica la cual a traves de selenium ingresa al url de la pagina y retorna los datos, luego almacena los datos en dataframe para al final retornarlo.
 
 Los datos estraidos genran los sigueintes dataframes
-![](https://github.com/rgaitanv/Trabajo1_Grupo9_Optimizacion_Heuristica/blob/main/Imagenes/info_del_recorrido.PNG)
+![](https://github.com/eider1939/Web-Scraping-Aero/blob/main/img/Datos.JPG)
 
 ## Depuracion
 
@@ -35,10 +35,10 @@ al tener los informes el archivo join.csv se debe modificar para concat los info
 Al final quedan los datos limpios los cuales pueden ser utilizados par aun analisis mayor.
 
 ### INFO
-![](https://github.com/rgaitanv/Trabajo1_Grupo9_Optimizacion_Heuristica/blob/main/Imagenes/info_del_recorrido.PNG)
+![](https://github.com/eider1939/Web-Scraping-Aero/blob/main/img/info_data.JPG)
 
 ### DATAFRAME
-![](https://github.com/rgaitanv/Trabajo1_Grupo9_Optimizacion_Heuristica/blob/main/Imagenes/info_del_recorrido.PNG)
+![](https://github.com/eider1939/Web-Scraping-Aero/blob/main/img/Dataframe.jpg)
 
 
 
