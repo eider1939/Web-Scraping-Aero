@@ -41,4 +41,8 @@ Al final quedan los datos limpios los cuales pueden ser utilizados par aun anali
 ![](https://github.com/eider1939/Web-Scraping-Aero/blob/main/img/Dataframe.jpg)
 
 
+### Nota
+
+en el archivo librerias.ipynb tiene ejemplo unitarias de como funciona el scraping
+
 
