@@ -10,4 +10,4 @@ def Fecha(Days):
     Fechas=[dia.strftime('%Y-%m-%d') for dia in Fechas]
     return Fechas
     
-#print(Fecha(30))
+print(Fecha(4))

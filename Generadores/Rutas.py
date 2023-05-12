@@ -4,7 +4,7 @@ Genera los trayectos posibles entre Ciudades
 ['BOG','CLO']--Eider
 ['BOG','MDE']--andres
 ['BOG','ADZ']---miguel
-['MDE,'SMR']---raul
+['BOG,'SMR']---raul
 
 
 '''
@@ -15,7 +15,7 @@ def rutas():
     :return: The function `rutas()` returns a list of tuples representing all possible legs between the
     cities in the `ciudades` list.
     """
-    ciudades = ['BOG','ClO']#['BOG','MDE']#['BOG','ADZ']#['MDE,'SMR']
+    ciudades = ['BOG','MDE']#['BOG','MDE']#['BOG','ADZ']#['MDE,'SMR']
     legs=[]
     for i in ciudades:
         for j in ciudades:

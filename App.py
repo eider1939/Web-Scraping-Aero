@@ -15,7 +15,7 @@ import pandas as pd
 if __name__ == "__main__":
     start_time=time.time()
     Fecha_hoy=datetime.now().strftime('%Y-%m-%d')
-    fechas=Fechas.Fecha(40)    #genera las fechas
+    fechas=Fechas.Fecha(4)    #genera las fechas
     rutas= Rutas.rutas()
     Departure='MED'  #deben cambiarlo por las rutas que se les asigno no importa el orden
     arrive='SMR'     #solo es para el nombre del archivo
@@ -28,9 +28,9 @@ if __name__ == "__main__":
     Datos_Latam.to_csv("Informes/Scraping_Latam_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
 
     ### Wingo
-    #urls_wingo=Urls.Urls_wingo(fechas,rutas)
-    #Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
-    #Datos_Wingo['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
-    #Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
-    #Datos_Wingo['Aerolinea']='Wingo'
-    #print('tiempo de ejecucion ',time.time() - start_time)
+    urls_wingo=Urls.Urls_wingo(fechas,rutas)
+    Datos_Wingo=Wingo.Scraping_Wingo(urls_wingo)
+    Datos_Wingo['CaptureDate']=datetime.now().strftime('%Y-%m-%d')
+    Datos_Wingo.to_csv("Informes/Scraping_Wingo_{}-{}_{}.csv".format(Departure,arrive,Fecha_hoy),index=False)
+    Datos_Wingo['Aerolinea']='Wingo'
+    print('tiempo de ejecucion ',time.time() - start_time)
