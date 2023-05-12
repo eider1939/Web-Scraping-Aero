@@ -1,10 +1,6 @@
 # Web-Scraping-Aero
 
-"""
-    App de Scraping de aero proyecto con fines academicos 
-
-"""
-
+App de Scraping de aero proyecto con fines academicos 
 
 ## el Archivo App.py 
 - Ejecuta todo el programa, lo primero que hace es llamar a los archivos en la carpeta generadores
